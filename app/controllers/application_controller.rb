@@ -6,5 +6,8 @@ class ApplicationController < ActionController::Base
     end
 
     def home
+        @gossips = Gossip.all
     end
+
+
 end

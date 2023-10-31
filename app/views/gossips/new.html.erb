@@ -1,0 +1,13 @@
+<%= form_for Gossip.new, url: gossips_path do |f| %>
+  <div class="field">
+    <%= f.label :title, 'Title' %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content, 'Content' %>
+    <%= f.text_area :content %>
+  </div>
+
+  <%= f.submit 'Create Gossip' %>
+<% end %>

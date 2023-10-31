@@ -1,0 +1,5 @@
+<% content_for :title, "Home" %>
+
+<% @gossips.each do |i| %> 
+<li><%="#{i.user.first_name}: #{i.title}"%> </li>
+<% end %>

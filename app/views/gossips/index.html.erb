@@ -5,7 +5,7 @@
         <div class="card mb-4" style="min-height: 300px;"> <!-- Ajustez la hauteur minimale à votre préférence -->
           <div class="card-body">
             <h5 class="card-title"><%= "#{gossip.user.first_name}: #{gossip.title}" %></h5>
-            <p class="card-text">Description du potin, si applicable</p>
+            <p class="card-text"><%= "#{gossip.content}" %></p>
           </div>
           <div class="card-footer">
             <%= link_to "Voir le potin", gossip_path(gossip), class: "btn btn-primary" %>

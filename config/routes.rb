@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'application#contact'
   get '/team', to: 'application#team'
   get '/gossips', to: 'gossips#index'
+  
   resources :gossips 
 
 end

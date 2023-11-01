@@ -1,5 +1,16 @@
 <% content_for :title, "Home" %>
 
-<% @gossips.each do |i| %> 
-<li><%="#{i.user.first_name}: #{i.title}"%> </li>
-<% end %>
+<div class="row">
+  <% @gossips.each do |i| %> 
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-header" style="background-color: #007BFF; color: #fff;">
+          <%= i.user.first_name %>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= i.title %></h5>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

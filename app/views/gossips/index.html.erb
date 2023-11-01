@@ -1,5 +1,17 @@
-<% content_for :title, "Home" %>
-
-<% @gossips.each do |i| %> 
-<li><%="#{i.user.first_name}: #{i.title}"%> </li>
-<% end %>
+<div class="container mt-5">
+  <div class="row">
+    <% @gossips.each do |gossip| %>
+      <div class="col-md-4">
+        <div class="card mb-4" style="min-height: 300px;"> <!-- Ajustez la hauteur minimale à votre préférence -->
+          <div class="card-body">
+            <h5 class="card-title"><%= "#{gossip.user.first_name}: #{gossip.title}" %></h5>
+            <p class="card-text">Description du potin, si applicable</p>
+          </div>
+          <div class="card-footer">
+            <%= link_to "Voir le potin", gossip_path(gossip), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

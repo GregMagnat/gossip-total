@@ -1,13 +1,13 @@
-<%= form_for Gossip.new, url: gossips_path do |f| %>
-  <div class="field">
-    <%= f.label :title, 'Title' %>
-    <%= f.text_field :title %>
+<%= form_for Gossip.new, url: gossips_path, class: "container mt-5" do |f| %>
+  <div class="form-group">
+    <%= f.label :title, 'Qui' %>
+    <%= f.text_field :title, class: "form-control", placeholder: 'Entrez le nom de l\'auteur' %>
   </div>
 
-  <div class="field">
-    <%= f.label :content, 'Content' %>
-    <%= f.text_area :content %>
+  <div class="form-group">
+    <%= f.label :content, 'Commentaire' %>
+    <%= f.text_area :content, class: "form-control", placeholder: 'Saisissez votre commentaire' %>
   </div>
 
-  <%= f.submit 'Create Gossip' %>
+  <%= f.submit 'Nouveau gossip', class: "btn btn-primary" %>
 <% end %>

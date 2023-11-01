@@ -8,10 +8,10 @@ class GossipsController < ApplicationController
         @gossip = Gossip.new(gossip_params.merge(user: User.first))
 
         if @gossip.save
-          flash[:success] = 'The super potin was successfully saved!'
+          flash[:success] = 'Ton potin est enregistré coco !'
         redirect_to root_path
       else
-          render 'new'
+          render 'nouveau'
       end
     end
       
@@ -20,4 +20,5 @@ class GossipsController < ApplicationController
     def gossip_params
        params.require(:gossip).permit(:title, :content)
     end
+
 end      

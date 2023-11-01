@@ -1,3 +1,23 @@
 <% content_for :title, "Team" %>
-<h1>C'est la dream team</h1>
-<img src="https://media1.ledevoir.com/images_galerie/nwd_452219_311955/image.jpg" alt="monkey_contact"/>
+
+<div class="container text-center mt-5">
+  <h1 class="mb-4">C'est la dream team</h1>
+  <div class="team-image">
+    <img src="https://media1.ledevoir.com/images_galerie/nwd_452219_311955/image.jpg" alt="team_image" class="img-fluid team-image-zoom"style="max-width: 600px;">>
+  </div>
+</div>
+
+<style>
+  .team-image-zoom {
+    transition: transform 0.3s;
+  }
+
+  .team-image-zoom:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+
+
+
+

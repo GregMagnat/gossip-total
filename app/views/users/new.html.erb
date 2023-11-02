@@ -1,0 +1,35 @@
+<h1>Ramène toi dans le gang</h1>
+
+<%= form_for(@user) do |f| %>
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "form-control" %>
+  </div>
+
+  <%= f.label :city_id, "Ville", class: "sr-only" %>
+    <%= f.collection_select :city_id, City.all, :id, :name, { include_blank: "Sélectionnez une ville" }, class: "form-control" %>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation, "Confirmation du mot de passe" %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "zééééé partiiii ", class: "btn btn-primary" %>
+  </div>
+<% end %>

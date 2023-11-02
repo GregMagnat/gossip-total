@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   resources :gossips
   resources :users
   resources :citys
+  resources :sessions
+
+  delete '/logout', to: 'sessions#destroy', as: 'logout'
+
 end

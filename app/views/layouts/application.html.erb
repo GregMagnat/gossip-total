@@ -7,7 +7,6 @@
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css', media: 'all' %>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  <%= javascript_importmap_tags %>
 </head>
 
 <body style="background-image: url('https://www.wallfizz.com/nature/ile-et-ile-deserte/6015-ile-au-paradis-WallFizz.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-color: rgba(0, 0, 0, 0.5);">
@@ -34,6 +33,15 @@
           <li class="nav-item">
             <%= link_to "Gossips", gossips_path, class: "nav-link" %>
           </li>
+          <div class="navbar-nav ms-auto">
+            <% if current_user %>
+              <%= form_tag session_path(current_user), method: :delete, class: "nav-link" do %>
+                <%= submit_tag "Logout" %>
+              <% end %>
+            <% else %>
+              <%= link_to "Login", new_session_path, class: "nav-link" %>
+            <% end %>
+          </div>
         </ul>
       </div>
     </div>

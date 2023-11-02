@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/team', to: 'application#team'
   get '/gossips', to: 'gossips#index'
   
-  resources :gossips 
-
+  resources :gossips
+  resources :users
+  resources :citys
 end

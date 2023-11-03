@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get '/home', to: 'application#home'
   get '/contact', to: 'application#contact'
   get '/team', to: 'application#team'
-  get '/gossips', to: 'gossips#index'
   
+  resources :homes
   resources :gossips
   resources :users
   resources :citys
